@@ -1,0 +1,72 @@
+name: Issue
+description: Feature, improvement, or task
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence — what does this issue deliver or fix?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why now? Reference to SRS section, architecture decision, or what dependency unlocked this.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: |
+        **In scope:**
+        - ...
+
+        **Out of scope (explicitly):**
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Technical notes
+      description: Relevant files/routes, Firestore collections, data model references, constraints. Not a step-by-step — just enough to prevent wrong assumptions.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Definition of done — use checkboxes.
+      value: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      value: |
+        - Blocked by: none
+        - Blocks: none
+    validations:
+      required: false
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort
+      options:
+        - "S — under 4h"
+        - "M — 4–8h"
+        - "L — 1–2 days"
+        - "XL — 3+ days"
+    validations:
+      required: true
